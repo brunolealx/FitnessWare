@@ -1,3 +1,5 @@
+using FitnessWare.Forms;
+
 namespace FitnessWare
 {
     internal static class Program
@@ -18,7 +20,7 @@ namespace FitnessWare
 
             // ==================== INICIA O FORMULARIO PRINCIPAL ====================
             // Executa o FormPrincipal da aplicação
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormAlunos());
         }
     }
 }

@@ -35,7 +35,7 @@
             maskedTextBox1 = new MaskedTextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            pictureBox2 = new PictureBox();
+            pbFoto = new PictureBox();
             button1 = new Button();
             comboBox1 = new ComboBox();
             label1 = new Label();
@@ -48,7 +48,7 @@
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -99,13 +99,13 @@
             textBox3.Size = new Size(374, 23);
             textBox3.TabIndex = 5;
             // 
-            // pictureBox2
+            // pbFoto
             // 
-            pictureBox2.Location = new Point(12, 212);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 120);
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
+            pbFoto.Location = new Point(12, 212);
+            pbFoto.Name = "pbFoto";
+            pbFoto.Size = new Size(100, 120);
+            pbFoto.TabIndex = 6;
+            pbFoto.TabStop = false;
             // 
             // button1
             // 
@@ -115,6 +115,7 @@
             button1.TabIndex = 7;
             button1.Text = "Enviar Foto";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // comboBox1
             // 
@@ -195,7 +196,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 367);
+            button2.Location = new Point(12, 386);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 16;
@@ -228,7 +229,7 @@
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Controls.Add(button1);
-            Controls.Add(pictureBox2);
+            Controls.Add(pbFoto);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(maskedTextBox1);
@@ -240,7 +241,7 @@
             Load += FormAlunos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -253,7 +254,7 @@
         private MaskedTextBox maskedTextBox1;
         private TextBox textBox2;
         private TextBox textBox3;
-        private PictureBox pictureBox2;
+        private PictureBox pbFoto;
         private Button button1;
         private ComboBox comboBox1;
         private Label label1;
