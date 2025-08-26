@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic; // Necessário para usar List<T>
-using SeuProjeto.Models;          // Importa as classes Models do projeto
+using FitnessWare.Models;          // Importa as classes Models do projeto
 
-namespace SeuProjeto.Services
+namespace FitnessWare.Models
 {
     public class AlunoService
     {

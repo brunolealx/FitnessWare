@@ -1,4 +1,4 @@
-﻿namespace SeuProjeto.Models
+﻿namespace FitnessWare.Models
 {
     public class Professor
     {

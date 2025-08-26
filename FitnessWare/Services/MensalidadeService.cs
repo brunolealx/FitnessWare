@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SeuProjeto.Models;
+using FitnessWare.Models;
 
-namespace SeuProjeto.Services
+namespace FitnessWare.Models
 {
     public class MensalidadeService
     {

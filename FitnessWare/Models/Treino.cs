@@ -1,16 +1,11 @@
-﻿namespace SeuProjeto.Models
+﻿using System.Collections.Generic;
+
+
+namespace FitnessWare.Models
 {
     public class Treino
     {
-        public string NomeAluno { get; set; }
-        public string Descricao { get; set; }
-        public int DuracaoMinutos { get; set; }
-
-        public Treino(string nomeAluno, string descricao, int duracaoMinutos)
-        {
-            NomeAluno = nomeAluno;
-            Descricao = descricao;
-            DuracaoMinutos = duracaoMinutos;
-        }
+        public Aluno Aluno { get; set; }
+        public List<Exercicio> Exercicios { get; set; } = new List<Exercicio>();
     }
 }

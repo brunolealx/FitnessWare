@@ -1,4 +1,4 @@
-﻿namespace SeuProjeto.Models
+﻿namespace FitnessWare.Models
 {
     // Representa um aluno cadastrado no sistema
     public class Aluno

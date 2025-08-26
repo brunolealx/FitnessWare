@@ -310,11 +310,11 @@
         private Label label7;
         private Button btnSalvar;
         private Button button3;
-        private DataGridView dgvAlunos;
         private DataGridViewTextBoxColumn colNome;
         private DataGridViewTextBoxColumn colIdade;
         private DataGridViewTextBoxColumn colTelefone;
         private DataGridViewTextBoxColumn colEmail;
         private DataGridViewTextBoxColumn colEndereco;
+        public DataGridView dgvAlunos;
     }
 }

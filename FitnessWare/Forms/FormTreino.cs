@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FitnessWare.Forms
 {
     public partial class FormTreino : Form
@@ -15,6 +16,11 @@ namespace FitnessWare.Forms
         public FormTreino()
         {
             InitializeComponent();
+        }
+
+        private void FormTreino_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

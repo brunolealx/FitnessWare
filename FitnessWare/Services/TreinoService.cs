@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SeuProjeto.Models;
+using FitnessWare.Models;
 
-namespace SeuProjeto.Services
+namespace FitnessWare.Services
 {
     public class TreinoService
     {
@@ -23,8 +23,8 @@ namespace SeuProjeto.Services
         // Lista treinos de um aluno específico
         public List<Treino> ListarTreinosPorAluno(string nomeAluno)
         {
-            // Filtra a lista e retorna apenas os treinos do aluno informado
-            return treinos.FindAll(t => t.NomeAluno == nomeAluno);
+            // Corrigido: acessa o nome do aluno dentro do objeto Aluno
+            return treinos.FindAll(t => t.Aluno.Nome == nomeAluno);
         }
     }
 }

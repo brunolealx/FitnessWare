@@ -22,5 +22,22 @@ namespace FitnessWare
             // Fecha todo o aplicativo
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFaturas_Click(object sender, EventArgs e)
+        {
+            // Aqui você coloca o que quer que aconteça ao clicar no botão
+            MessageBox.Show("Botão Faturas clicado!");
+        }
     }
+
 }
