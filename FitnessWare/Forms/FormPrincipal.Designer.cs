@@ -28,12 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            pictureBox1 = new PictureBox();
+            btnAlunos = new Button();
+            btnFechar = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Image = Properties.Resources.background;
+            pictureBox1.Location = new Point(251, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(306, 163);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // btnAlunos
+            // 
+            btnAlunos.Location = new Point(367, 181);
+            btnAlunos.Name = "btnAlunos";
+            btnAlunos.Size = new Size(75, 23);
+            btnAlunos.TabIndex = 1;
+            btnAlunos.Text = "Alunos";
+            btnAlunos.UseVisualStyleBackColor = true;
+            btnAlunos.Click += btnAlunos_Click;
+            // 
+            // btnFechar
+            // 
+            btnFechar.Location = new Point(367, 210);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(75, 23);
+            btnFechar.TabIndex = 2;
+            btnFechar.Text = "Fechar";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
+            // 
+            // FormPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Purple;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnFechar);
+            Controls.Add(btnAlunos);
+            Controls.Add(pictureBox1);
+            Name = "FormPrincipal";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox pictureBox1;
+        private Button btnAlunos;
+        private Button btnFechar;
     }
 }

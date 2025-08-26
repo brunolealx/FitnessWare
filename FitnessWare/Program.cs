@@ -20,7 +20,7 @@ namespace FitnessWare
 
             // ==================== INICIA O FORMULARIO PRINCIPAL ====================
             // Executa o FormPrincipal da aplicação
-            Application.Run(new FormAlunos());
+            Application.Run(new FormPrincipal());
         }
     }
 }
