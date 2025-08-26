@@ -3,14 +3,21 @@ namespace FitnessWare
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        /// Ponto de entrada principal do aplicativo.
         /// </summary>
-        [STAThread]
+        [STAThread] // Indica que o aplicativo usa modelo de thread STA necessário para Windows Forms
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            // Inicializa as configurações do Windows Forms, como DPI e fonte padrão
             ApplicationConfiguration.Initialize();
+
+            // ==================== EXECUTA TESTES ====================
+            // Chama o TestProgram para testar os Services (Alunos, Treinos, Mensalidades)
+            // Os resultados serão exibidos no console
+            FitnessWare.Testes.TestProgram.Executar();
+
+            // ==================== INICIA O FORMULARIO PRINCIPAL ====================
+            // Executa o FormPrincipal da aplicação
             Application.Run(new FormPrincipal());
         }
     }
