@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FitnessWare.Models
+﻿namespace SeuProjeto.Models
 {
-    internal class Treino
+    public class Treino
     {
+        public string NomeAluno { get; set; }
+        public string Descricao { get; set; }
+        public int DuracaoMinutos { get; set; }
+
+        public Treino(string nomeAluno, string descricao, int duracaoMinutos)
+        {
+            NomeAluno = nomeAluno;
+            Descricao = descricao;
+            DuracaoMinutos = duracaoMinutos;
+        }
     }
 }

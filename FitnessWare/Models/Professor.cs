@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FitnessWare.Models
+﻿namespace SeuProjeto.Models
 {
-    internal class Professor
+    public class Professor
     {
+        public string Nome { get; set; }
+        public string Especialidade { get; set; }
+
+        public Professor(string nome, string especialidade)
+        {
+            Nome = nome;
+            Especialidade = especialidade;
+        }
     }
 }

@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FitnessWare.Models
+﻿namespace SeuProjeto.Models
 {
-    internal class Class1
+    public class Aluno
     {
+        // Propriedades
+        public string Nome { get; set; }
+        public int Idade { get; set; }
+        public string Telefone { get; set; }
+        public bool MensalidadeEmDia { get; set; }
+
+        // Construtor
+        public Aluno(string nome, int idade, string telefone, bool mensalidadeEmDia)
+        {
+            Nome = nome;
+            Idade = idade;
+            Telefone = telefone;
+            MensalidadeEmDia = mensalidadeEmDia;
+        }
     }
 }
