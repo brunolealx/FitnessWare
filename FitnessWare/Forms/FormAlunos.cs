@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FitnessWare.Forms
 {
-    public partial class FormCadastroAluno : Form
+    public partial class FormAlunos : Form
     {
-        public FormCadastroAluno()
+        public FormAlunos()
         {
             InitializeComponent();
         }
