@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using SeuProjeto.Models;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FitnessWare.Forms
@@ -17,67 +12,83 @@ namespace FitnessWare.Forms
             InitializeComponent();
         }
 
+        // Evento disparado ao carregar o Form
         private void FormAlunos_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // ------------------------------
+        // Botão Enviar Foto
         private void button1_Click(object sender, EventArgs e)
         {
-            // Cria um diálogo para o usuário escolher um arquivo
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                // Define o título da janela
                 ofd.Title = "Selecione uma foto";
-
-                // Define quais tipos de arquivos podem ser selecionados
                 ofd.Filter = "Imagens (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
 
-                // Mostra a janela de seleção e verifica se o usuário clicou em "OK"
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    // Carrega a imagem selecionada no PictureBox
                     pbFoto.Image = Image.FromFile(ofd.FileName);
-
-                    // Ajusta a imagem para preencher o PictureBox sem distorcer muito
                     pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
         }
+
+        // ------------------------------
+        // Botão Salvar
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            // Validação simples: Nome não vazio e Idade preenchida
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                MessageBox.Show("Por favor, preencha o Nome.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Criar objeto Aluno com os dados do Form
+            Aluno novoAluno = new Aluno
+            {
+                Nome = txtNome.Text.Trim(),
+                Idade = (int)txtIdade.Value,
+                Telefone = txtTelefone.Text.Trim(),
+                Email = txtEmail.Text.Trim(),
+                Endereco = txtEndereco.Text.Trim()
+            };
+
+            // Confirmação
+            MessageBox.Show($"Aluno {novoAluno.Nome} cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Limpar campos
+            LimparCampos();
+        }
+
+        // ------------------------------
+        // Botão Cancelar
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        // ------------------------------
+        // Limpar campos do Form
+        private void LimparCampos()
+        {
+            txtNome.Clear();
+            txtIdade.Value = txtIdade.Minimum; // NumericUpDown não tem Clear
+            txtTelefone.Clear();
+            txtEmail.Clear();
+            txtEndereco.Clear();
+            pbFoto.Image = null;
+        }
+
+        // ------------------------------
+        // Eventos gerados pelo Designer (podem ficar vazios)
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void label4_Click(object sender, EventArgs e) { }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e) { }
     }
 }

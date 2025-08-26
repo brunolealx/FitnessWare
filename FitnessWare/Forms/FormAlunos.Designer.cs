@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlunos));
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            maskedTextBox1 = new MaskedTextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtNome = new TextBox();
+            txtIdade = new NumericUpDown();
+            txtTelefone = new MaskedTextBox();
+            txtEmail = new TextBox();
+            txtEndereco = new TextBox();
             pbFoto = new PictureBox();
             button1 = new Button();
-            comboBox1 = new ComboBox();
+            cmbStatus = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -47,7 +47,7 @@
             button2 = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtIdade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
             // 
@@ -62,42 +62,42 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(86, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(374, 23);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtNome.Location = new Point(86, 12);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(374, 23);
+            txtNome.TabIndex = 1;
+            txtNome.TextChanged += textBox1_TextChanged;
             // 
-            // numericUpDown1
+            // txtIdade
             // 
-            numericUpDown1.Location = new Point(86, 41);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(53, 23);
-            numericUpDown1.TabIndex = 2;
+            txtIdade.Location = new Point(86, 41);
+            txtIdade.Name = "txtIdade";
+            txtIdade.Size = new Size(53, 23);
+            txtIdade.TabIndex = 2;
             // 
-            // maskedTextBox1
+            // txtTelefone
             // 
-            maskedTextBox1.Location = new Point(87, 70);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(373, 23);
-            maskedTextBox1.TabIndex = 3;
-            maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
+            txtTelefone.Location = new Point(87, 70);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(373, 23);
+            txtTelefone.TabIndex = 3;
+            txtTelefone.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(86, 99);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(374, 23);
-            textBox2.TabIndex = 4;
+            txtEmail.Location = new Point(86, 99);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(374, 23);
+            txtEmail.TabIndex = 4;
             // 
-            // textBox3
+            // txtEndereco
             // 
-            textBox3.Location = new Point(86, 128);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(374, 23);
-            textBox3.TabIndex = 5;
+            txtEndereco.Location = new Point(86, 128);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(374, 23);
+            txtEndereco.TabIndex = 5;
             // 
             // pbFoto
             // 
@@ -117,13 +117,13 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // comboBox1
+            // cmbStatus
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(339, 212);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 8;
+            cmbStatus.FormattingEnabled = true;
+            cmbStatus.Location = new Point(339, 212);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(121, 23);
+            cmbStatus.TabIndex = 8;
             // 
             // label1
             // 
@@ -227,20 +227,20 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbStatus);
             Controls.Add(button1);
             Controls.Add(pbFoto);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(maskedTextBox1);
-            Controls.Add(numericUpDown1);
-            Controls.Add(textBox1);
+            Controls.Add(txtEndereco);
+            Controls.Add(txtEmail);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtIdade);
+            Controls.Add(txtNome);
             Controls.Add(pictureBox1);
             Name = "FormAlunos";
             Text = "FormAlunos";
             Load += FormAlunos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtIdade).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -249,14 +249,14 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private NumericUpDown numericUpDown1;
-        private MaskedTextBox maskedTextBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtNome;
+        private NumericUpDown txtIdade;
+        private MaskedTextBox txtTelefone;
+        private TextBox txtEmail;
+        private TextBox txtEndereco;
         private PictureBox pbFoto;
         private Button button1;
-        private ComboBox comboBox1;
+        private ComboBox cmbStatus;
         private Label label1;
         private Label label2;
         private Label label3;
