@@ -55,7 +55,14 @@ namespace FitnessWare.Forms
                 Email = txtEmail.Text.Trim(),
                 Endereco = txtEndereco.Text.Trim()
             };
-
+            // Adiciona o aluno no DataGridView
+            dgvAlunos.Rows.Add(
+                novoAluno.Nome,
+                novoAluno.Idade,
+                novoAluno.Telefone,
+                novoAluno.Email,
+                novoAluno.Endereco
+            );
             // Confirmação
             MessageBox.Show($"Aluno {novoAluno.Nome} cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -65,10 +72,7 @@ namespace FitnessWare.Forms
 
         // ------------------------------
         // Botão Cancelar
-        private void button2_Click(object sender, EventArgs e)
-        {
-            LimparCampos();
-        }
+   
 
         // ------------------------------
         // Limpar campos do Form

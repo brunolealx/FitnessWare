@@ -44,19 +44,26 @@
             label4 = new Label();
             label6 = new Label();
             label7 = new Label();
-            button2 = new Button();
+            btnSalvar = new Button();
             button3 = new Button();
+            dgvAlunos = new DataGridView();
+            colNome = new DataGridViewTextBoxColumn();
+            colIdade = new DataGridViewTextBoxColumn();
+            colTelefone = new DataGridViewTextBoxColumn();
+            colEmail = new DataGridViewTextBoxColumn();
+            colEndereco = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtIdade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlunos).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(559, 12);
+            pictureBox1.Location = new Point(482, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(229, 148);
+            pictureBox1.Size = new Size(306, 148);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -120,7 +127,7 @@
             // cmbStatus
             // 
             cmbStatus.FormattingEnabled = true;
-            cmbStatus.Location = new Point(339, 212);
+            cmbStatus.Location = new Point(339, 157);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(121, 23);
             cmbStatus.TabIndex = 8;
@@ -187,22 +194,22 @@
             label7.AutoSize = true;
             label7.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(279, 215);
+            label7.Location = new Point(279, 160);
             label7.Name = "label7";
             label7.Size = new Size(54, 14);
             label7.TabIndex = 15;
             label7.Text = "Status:";
             label7.Click += label7_Click;
             // 
-            // button2
+            // btnSalvar
             // 
-            button2.Location = new Point(12, 386);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 16;
-            button2.Text = "Salvar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnSalvar.Location = new Point(12, 386);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(75, 23);
+            btnSalvar.TabIndex = 16;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // button3
             // 
@@ -214,14 +221,50 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // dgvAlunos
+            // 
+            dgvAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlunos.Columns.AddRange(new DataGridViewColumn[] { colNome, colIdade, colTelefone, colEmail, colEndereco });
+            dgvAlunos.Location = new Point(287, 192);
+            dgvAlunos.Name = "dgvAlunos";
+            dgvAlunos.RowHeadersVisible = false;
+            dgvAlunos.Size = new Size(501, 246);
+            dgvAlunos.TabIndex = 18;
+            // 
+            // colNome
+            // 
+            colNome.HeaderText = "Nome";
+            colNome.Name = "colNome";
+            // 
+            // colIdade
+            // 
+            colIdade.HeaderText = "Idade";
+            colIdade.Name = "colIdade";
+            // 
+            // colTelefone
+            // 
+            colTelefone.HeaderText = "Telefone";
+            colTelefone.Name = "colTelefone";
+            // 
+            // colEmail
+            // 
+            colEmail.HeaderText = "E-mail";
+            colEmail.Name = "colEmail";
+            // 
+            // colEndereco
+            // 
+            colEndereco.HeaderText = "Endereço";
+            colEndereco.Name = "colEndereco";
+            // 
             // FormAlunos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Purple;
             ClientSize = new Size(800, 450);
+            Controls.Add(dgvAlunos);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnSalvar);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label4);
@@ -243,6 +286,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtIdade).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlunos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -264,7 +308,13 @@
         private Label label4;
         private Label label6;
         private Label label7;
-        private Button button2;
+        private Button btnSalvar;
         private Button button3;
+        private DataGridView dgvAlunos;
+        private DataGridViewTextBoxColumn colNome;
+        private DataGridViewTextBoxColumn colIdade;
+        private DataGridViewTextBoxColumn colTelefone;
+        private DataGridViewTextBoxColumn colEmail;
+        private DataGridViewTextBoxColumn colEndereco;
     }
 }
