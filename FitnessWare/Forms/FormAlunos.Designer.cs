@@ -212,6 +212,7 @@
             button3.TabIndex = 17;
             button3.Text = "Cancelar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // FormAlunos
             // 

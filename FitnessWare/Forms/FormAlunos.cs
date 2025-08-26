@@ -90,5 +90,14 @@ namespace FitnessWare.Forms
         private void label4_Click(object sender, EventArgs e) { }
         private void label7_Click(object sender, EventArgs e) { }
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e) { }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Limpa os campos antes de fechar, opcional
+            LimparCampos();
+
+            // Fecha o FormAlunos, voltando para o Form principal
+            this.Close();
+        }
     }
 }
